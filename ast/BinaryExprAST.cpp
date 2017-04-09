@@ -1,5 +1,4 @@
 #include "ast/BinaryExprAST.h"
-#include "kaleidoscope/kaleidoscope.h"
 
 // Generate LLVM code for binary expressions
 llvm::Value *BinaryExprAST::codegen() {

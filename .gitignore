@@ -4,3 +4,5 @@
 *.o
 
 /llvm
+/.idea
+/cmake-build-debug

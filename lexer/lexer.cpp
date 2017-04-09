@@ -18,6 +18,7 @@ int gettok() {
   }
 
   // Next thing is recognize identifier and specific keywords like "def"
+  // identifier: [a-zA-Z][a-zA-Z0-9]*
   if (isalpha(LastChar)) {
     IdentifierStr = LastChar;
 
@@ -25,19 +26,16 @@ int gettok() {
     while (isalnum(LastChar = getchar())) {
       IdentifierStr += LastChar;
     }
-
     if (IdentifierStr == "def") {
       return tok_def;
     }
-
     if (IdentifierStr == "extern") {
       return tok_extern;
     }
-
     return tok_identifier;
   }
 
-  // Stacking together only numeric values
+  // Stacking together only numeric values: [0-9.]+
   if (isdigit(LastChar) || LastChar == '.') {
     std::string NumStr;
 

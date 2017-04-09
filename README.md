@@ -10,6 +10,16 @@ make
 # This should bring up a simple repl
 ~~~
 
+On Ubuntu (tested on Kubuntu 21.10)
+~~~
+# Install llvm:
+sudo apt-get install clang llvm-dev
+# Build project:
+cmake .
+cmake --build .
+./llvm-kaleidoscope
+~~~
+
 ## Why?
 
 Self-education...
